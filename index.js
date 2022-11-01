@@ -1,13 +1,14 @@
 // if (process.env.NODE_ENV !== 'production'){
 //     require('dotenv');
 // }
+const password = require('./passw');
 const express = require('express');
 const app = express();
 const path = require('path');
 const exphbs = require('express-handlebars');
 const mongoose = require('mongoose');
 
-const DATABASE_URL = "mongodb+srv://jimmymut:2rIMnlqrILoosKmj@cluster0.ldrujdj.mongodb.net/?retryWrites=true&w=majority"
+const DATABASE_URL = "mongodb+srv://jimmymut:" + password + "@cluster0.ldrujdj.mongodb.net/?retryWrites=true&w=majority"
 
 
 const PORT = process.env.PORT || 3000;
