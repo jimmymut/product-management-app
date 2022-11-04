@@ -5,24 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product management app</title>
-    {{!-- <link rel="stylesheet" href="../../public/style.css"> --}}
-    <style>
-        body{
-            background-color: aqua;
-        }
-        a{
-            padding-right: 10px;
-            font-size: 20px;
-        }
-        nav{
-            display: flex;
-            justify-conent: space-between;
-            align-items: flex-end;
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main>
     {{{body}}}
+    <script>
+        function validatePassword(){
+          const passwor = document.getElementById('password').value;
+          const confirmPassword = document.getElementById('confirm-password').value;
+          if (passwor !== confirmPassword){
+            document.getElementById('small-password').style = "display: block; color: red;";
+          setTimeout(() =>{
+            document.getElementById('small-password').style = "display: none;";
+          }, 7000);
+          return false;
+          }
+          else{
+            return true;
+          }
+        }
+    </script>
+    </main>
 </body>
 </html>

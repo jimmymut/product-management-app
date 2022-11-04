@@ -1,0 +1,23 @@
+{{> links}}
+<h3>Fill in the form with correct credentials to login</h3>
+<form action="/login" method="POST" >
+<table>
+    <tr>
+        <td><label for="email">Email</label></td>
+        <td>
+            <input type="email" id="email" name="email" required>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="password">Password</label></td>
+        <td>
+            <input type="password" name="password" id="password" required>
+        </td>
+    </tr>
+</table>
+{{#if errorMessage}}
+  <div class="error-message">{{message}}</div>
+  {{/if}}
+<button type="submit">Login</button>
+</form>
+<p>Are you a new user?<a href="/signup">Sign Up</a></p>
